@@ -1,0 +1,2 @@
+# Physics-Informed-Surrogate-Model-for-Porous-Heat-Exchangers
+The physics-informed surrogate model for lattice heat exchanger design is trained on CFD data to predict pressure drop, velocity, surface area, and mass. This enables rapid inverse design to maximize performance under constraints. The novel approach blends ML with fluid physics and is applicable to heat transfer, aerospace, and energy systems.
