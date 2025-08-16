@@ -3,35 +3,25 @@ The physics-informed surrogate model for lattice heat exchanger design is traine
 
 
 # Accelerating Heat Exchanger Design with Physics-Based Surrogate Modeling
-
 This repository contains  the nTop + ASME IDETC-CIE Student Hackathon, where we developed a physics-informed surrogate model to predict and optimize the performance of a parameterized heat exchanger without relying on computationally expensive CFD runs.
 
 # Problem Statement
-
 Traditional design optimization for complex fluid-thermal systems, such as lattice-based heat exchangers, requires iterative geometry generation and full CFD simulations, both of which are computationally expensive. In this work we tried to Train a surrogate physics model capable of accurately predicting:
 
 **1. Pressure Drop (Pa)**
-
 **2. Average Flow Velocity (mm/s)**
-
 **3. Core Surface Area (mm²)**
-
 **4. Mass (g)**
-
 **5. Reynolds Number**
 
 *Eventually, we need to perform inverse design to maximize surface area while satisfying constraints on mass, pressure drop, and average velocity.*
 
 # Physics-Based Approach
-
 Instead of using a black-box ML model, the surrogate model was grounded in CFD-derived simulation data from a full factorial experiment design of a parameterized lattice cell geometry.
 
 Inputs:
-
 **1. Cell Size X (mm)**
-
 **2. Cell Size Y/Z (mm)**
-
 **3. Inlet Flow Velocity (mm/s)**
 
 **Outputs: CFD-computed mass properties & flow metrics.**
