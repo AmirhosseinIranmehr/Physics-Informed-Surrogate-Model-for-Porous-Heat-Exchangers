@@ -24,6 +24,7 @@ Traditional design optimization for complex fluid-thermal systems, such as latti
 Instead of using a black-box ML model, the surrogate model was grounded in CFD-derived simulation data from a full factorial experiment design of a parameterized lattice cell geometry.
 
 Inputs:
+
 **1. Cell Size X (mm)**
 
 **2. Cell Size Y/Z (mm)**
