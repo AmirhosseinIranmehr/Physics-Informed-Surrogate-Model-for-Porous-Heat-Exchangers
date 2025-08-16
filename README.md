@@ -8,8 +8,7 @@ This repository contains  the nTop + ASME IDETC-CIE Student Hackathon, where we 
 
 # Problem Statement
 
-Traditional design optimization for complex fluid-thermal systems, such as lattice-based heat exchangers, requires iterative geometry generation and full CFD simulations—both of which are computationally expensive.
-In this work we tried to Train a surrogate physics model capable of accurately predicting:
+Traditional design optimization for complex fluid-thermal systems, such as lattice-based heat exchangers, requires iterative geometry generation and full CFD simulations, both of which are computationally expensive. In this work we tried to Train a surrogate physics model capable of accurately predicting:
 
 **1. Pressure Drop (Pa)**
 
@@ -21,7 +20,7 @@ In this work we tried to Train a surrogate physics model capable of accurately p
 
 **5. Reynolds Number**
 
-Eventually, we need to perform inverse design to maximize surface area while satisfying constraints on mass, pressure drop, and average velocity.
+*Eventually, we need to perform inverse design to maximize surface area while satisfying constraints on mass, pressure drop, and average velocity.*
 
 # Physics-Based Approach
 
@@ -40,19 +39,38 @@ Inputs:
 The physics basis ensures that predictions respect governing fluid mechanics relationships, enabling trustworthy design decisions. By embedding physical relationships captured in CFD into the ML model’s training set, the surrogate retains high fidelity to the original physics while reducing evaluation times from minutes/hours to milliseconds. 
 
 # Key Features
-**Exploratory Data Analysis (EDA)**: Perform comprehsnive EDA to determine the features correlations, distrubtions, and patterns to augmentation of the data with better physics-based understanding. 
+**Exploratory Data Analysis (EDA)**
+1. Performed comprehensive EDA to examine feature correlations, distributions, and trends in CFD-derived outputs.
+2. Identified physically meaningful relationships between cell sizes, inlet velocity, and thermal–fluid outputs.
+3. Used pair plots, correlation heatmaps, and scatter matrices to visualize dependencies.
+4. Detected nonlinearities and parameter interactions to inform model selection.
+5. Verified dimensional consistency and ranges of all variables to ensure physical realism.
 
-**Surrogate Model Training**: Built on simulation data to reflect fluid and thermal physics.
+**Surrogate Model Training**
+1. Developed physics-informed regression models trained on high-fidelity CFD data.
+2. Designed a reproducible training pipeline with preprocessing, scaling, and feature engineering.
+3. Integrated k-fold cross-validation before final training to ensure robust performance estimation and reduce overfitting risk.
 
-**Multi-Objective Optimization**: Inverse design to meet constraints while maximizing thermal performance.
+**Model Selection and Comparison**
+1. Implemented multiple regression models (e.g., Random Forest, Gradient Boosting, Polynomial Regression, and Neural Networks).
+2. Compared performance metrics (RMSE, R²) for each predicted quantity across models.
+3. Selected the best-performing architecture for final deployment based on both **accuracy** and **computational efficiency**.
 
+**Multi-Objective Optimization**
+1. Applied inverse design to maximize core surface area while satisfying constraints on mass, average velocity, and pressure drop.
+2. Utilized the trained surrogate for rapid parameter sweeps, enabling millisecond-level evaluations instead of lengthy CFD runs.
+3. Demonstrated optimal designs by mapping feasible regions in the parameter space.
+
+**Physics-Based Understanding**
+1. Grounded the surrogate model in physical constraints learned from CFD simulations.
+2. Ensured that predictions respect fundamental fluid mechanics principles, improving trust and interpretability.
+3. Expanded the domain knowledge of the problem by data agumentation (125 to 890) by considering the features importance and physics-based corelations.
+
+# Code Descriptions
+Run the notebook and the best model will be chosen between all models (e.g., Gradient Boosting) as "best_model". This would be further utilized to extract optimal design and perform the invers-design process. At the last block, you will be asked to add your inputs (X Cell-YZ Cell- Inlet Velociy), accordingly; based on the best model predcitions the results for comparison with nTop will be given. This would ensure the practibility of the model across different ranges of parameters and un-seen data.
 
 # Applications
-
 The methodology extends beyond this challenge to any complex engineering system where:
-
-High-fidelity simulations are expensive.
-
-Rapid design iteration is needed.
-
-Physical interpretability is critical for trust in predictions.
+1. High-fidelity simulations are expensive.
+2. Rapid design iteration is needed.
+3. Physical interpretability is critical for trust in predictions.
