@@ -67,7 +67,9 @@ The physics basis ensures that predictions respect governing fluid mechanics rel
 3. Expanded the domain knowledge of the problem by data agumentation (125 to 890) by considering the features importance and physics-based corelations.
 
 # Code Descriptions
-Run the notebook and the best model will be chosen between all models (e.g., Gradient Boosting) as "best_model". This would be further utilized to extract optimal design and perform the invers-design process. At the last block, you will be asked to add your inputs (X Cell-YZ Cell- Inlet Velociy), accordingly; based on the best model predcitions the results for comparison with nTop will be given. This would ensure the practibility of the model across different ranges of parameters and un-seen data.
+Use the expeanded data in the repository for the code analysis. 
+Run the notebook and the best model will be chosen between all models (e.g., Gradient Boosting) as "best_model". This would be further utilized to extract optimal design and perform the invers-design process. 
+At the last block, you will be asked to add your inputs (X Cell-YZ Cell- Inlet Velociy), accordingly; based on the best model predcitions the results for comparison with nTop will be given. This would ensure the practibility of the model across different ranges of parameters and un-seen data.
 
 # Applications
 The methodology extends beyond this challenge to any complex engineering system where:
