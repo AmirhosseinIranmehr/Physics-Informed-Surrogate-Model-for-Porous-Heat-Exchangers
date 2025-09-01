@@ -1,6 +1,8 @@
 # Physics-Informed-Surrogate-Model-for-Porous-Heat-Exchangers
 The physics-informed surrogate model for lattice heat exchanger design is trained on CFD data to predict pressure drop, velocity, surface area, and mass. This enables rapid inverse design to maximize performance under constraints. The novel approach blends ML with fluid physics and is applicable to heat transfer, aerospace, and energy systems.
 
+<img width="4403" height="2104" alt="Surrogate Model Framework" src="https://github.com/user-attachments/assets/cee5e462-60a4-4a5b-9ca0-3e896c7f2104" />
+
 
 # Accelerating Heat Exchanger Design with Physics-Based Surrogate Modeling
 This repository contains  the nTop + ASME IDETC-CIE Student Hackathon, where we developed a physics-informed surrogate model to predict and optimize the performance of a parameterized heat exchanger without relying on computationally expensive CFD runs.
