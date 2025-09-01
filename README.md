@@ -44,6 +44,10 @@ The physics basis ensures that predictions respect governing fluid mechanics rel
 3. Used pair plots, correlation heatmaps, and scatter matrices to visualize dependencies.
 4. Detected nonlinearities and parameter interactions to inform model selection.
 5. Verified dimensional consistency and ranges of all variables to ensure physical realism.
+<img width="3570" height="2369" alt="tradeoff-plots" src="https://github.com/user-attachments/assets/fdb203ab-aa1c-4827-bfae-551549442462" />
+<img width="1766" height="1182" alt="Mass-avg velocity feasible" src="https://github.com/user-attachments/assets/a25d3037-16d6-4ff1-a6c0-49feb9ce7674" />
+<img width="1823" height="1186" alt="avg-pressuredrop feasible" src="https://github.com/user-attachments/assets/d182db38-c71a-409b-9980-5cafa7422936" />
+<img width="1807" height="1173" alt="output" src="https://github.com/user-attachments/assets/149ad2d6-d335-4fd9-8789-56feed8271f2" />
 
 **Surrogate Model Training**
 1. Developed physics-informed regression models trained on high-fidelity CFD data.
@@ -54,6 +58,9 @@ The physics basis ensures that predictions respect governing fluid mechanics rel
 1. Implemented multiple regression models (e.g., Random Forest, Gradient Boosting, Polynomial Regression, and Neural Networks).
 2. Compared performance metrics (RMSE, R²) for each predicted quantity across models.
 3. Selected the best-performing architecture for final deployment based on both **accuracy** and **computational efficiency**.
+<img width="3052" height="2547" alt="Hist Residualas" src="https://github.com/user-attachments/assets/d83c2144-91b5-433c-ab05-1d28fddbb0ae" />
+<img width="2829" height="2553" alt="Hist Results" src="https://github.com/user-attachments/assets/3b260e84-bbcf-4f1b-80cd-bb363bb9c858" />
+<img width="2070" height="1020" alt="Hist parameters importance" src="https://github.com/user-attachments/assets/7fedd7bc-83dd-437d-bd79-3732711126fe" />
 
 **Multi-Objective Optimization**
 1. Applied inverse design to maximize core surface area while satisfying constraints on mass, average velocity, and pressure drop.
